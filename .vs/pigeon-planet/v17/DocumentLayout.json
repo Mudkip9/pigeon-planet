@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\source\\pigeon-planet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7308EEE1-EE98-F9D0-92FD-F79ED1AC2A63}|Assembly-CSharp.csproj|c:\\source\\pigeon-planet\\assets\\firingpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7308EEE1-EE98-F9D0-92FD-F79ED1AC2A63}|Assembly-CSharp.csproj|solutionrelative:assets\\firingpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7308EEE1-EE98-F9D0-92FD-F79ED1AC2A63}|Assembly-CSharp.csproj|c:\\source\\pigeon-planet\\assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7308EEE1-EE98-F9D0-92FD-F79ED1AC2A63}|Assembly-CSharp.csproj|solutionrelative:assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "firingpoint.cs",
+              "DocumentMoniker": "C:\\source\\pigeon-planet\\Assets\\firingpoint.cs",
+              "RelativeDocumentMoniker": "Assets\\firingpoint.cs",
+              "ToolTip": "C:\\source\\pigeon-planet\\Assets\\firingpoint.cs",
+              "RelativeToolTip": "Assets\\firingpoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T03:41:40.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\source\\pigeon-planet\\Assets\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Bullet.cs",
+              "ToolTip": "C:\\source\\pigeon-planet\\Assets\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Bullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T03:41:12.973Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
