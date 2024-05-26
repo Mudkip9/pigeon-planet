@@ -1,4 +1,4 @@
-Library
-.vs\
-Logs
-UserSettings
+Library/
+.vs/
+Logs/
+UserSettings/
