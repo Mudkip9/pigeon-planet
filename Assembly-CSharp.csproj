@@ -64,6 +64,7 @@
     <Compile Include="Assets\gun.cs" />
     <Compile Include="Assets\camera.cs" />
     <Compile Include="Assets\firingpoint.cs" />
+    <Compile Include="Assets\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
