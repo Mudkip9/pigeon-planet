@@ -38,7 +38,7 @@ public class gun : MonoBehaviour
             ChangeSprite(rightGun);
             
             Vector3 adamsPosition = adam.transform.position;            
-            transform.position = new Vector3(adamsPosition.x + 1.6f, adamsPosition.y);
+            transform.position = new Vector3(adamsPosition.x + 2f, adamsPosition.y, -5);
 
             //Rigidbody2D adamRigidbody2D = adam.GetComponent<Rigidbody2D>();
             //adamRigidbody2D.bodyType = RigidbodyType2D.Kinematic;
@@ -49,7 +49,7 @@ public class gun : MonoBehaviour
         {
             ChangeSprite(leftGun);            
             Vector3 adamsPosition = adam.transform.position;
-            transform.position = new Vector3(adamsPosition.x - 1.6f, adamsPosition.y);            
+            transform.position = new Vector3(adamsPosition.x - 2f, adamsPosition.y, -5);            
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))

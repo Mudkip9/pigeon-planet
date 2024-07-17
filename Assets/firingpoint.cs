@@ -21,14 +21,14 @@ public class firingpoint : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0f, 0f, -90f);
             Vector3 gunPosition = gunn.transform.position;
-            transform.position = new Vector3(gunPosition.x + 1.6f, gunPosition.y + 0.4f, 1);
+            transform.position = new Vector3(gunPosition.x + 1.6f, gunPosition.y + 0.4f, -2);
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.eulerAngles = new Vector3(0f, 0f, 90f);
             Vector3 gunPosition = gunn.transform.position;
-            transform.position = new Vector3(gunPosition.x - 1.6f, gunPosition.y + 0.4f, 1);
+            transform.position = new Vector3(gunPosition.x - 1.6f, gunPosition.y + 0.4f, -2);
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+//using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite rightSprite;
     public Sprite upSprite;
     public Sprite downSprite;
+    public Animator animator;
 
     void ChangeSprite(Sprite newSprite)
     {
@@ -92,42 +94,82 @@ public class PlayerMovement : MonoBehaviour
     //    }
 
     //}
-
+    private void Start()
+    {  
+            animator.gameObject.GetComponent<Animator>().enabled = false;
+    }
 
 
     private void Update()
     {
+        
+
+ 
         Vector3 vector3 = this.transform.position;  
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) 
         {
+            animator.gameObject.GetComponent<Animator>().enabled = true;
             transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
-            ChangeSprite(rightSprite);
+            animator.Play("Player_IdleRight");
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            animator.gameObject.GetComponent<Animator>().enabled = false;
+
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
         {
+            animator.gameObject.GetComponent<Animator>().enabled = true;
             transform.position -= new Vector3(speed * Time.deltaTime, 0f, 0f);
-            ChangeSprite(leftSprite);
+            animator.Play("Player_IdleLeft");
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            animator.gameObject.GetComponent<Animator>().enabled = false;
+
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) 
         {
+            animator.gameObject.GetComponent<Animator>().enabled = true;
             transform.position += new Vector3(0f, speed * Time.deltaTime, 0f);
-            ChangeSprite(upSprite);
+            animator.Play("Player_IdleUp");
+        }
+
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            animator.gameObject.GetComponent<Animator>().enabled = false;
+
         }
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) 
         {
-            transform.position -= new Vector3(0f, speed * Time.deltaTime, 0f);
-            ChangeSprite(downSprite);
+            animator.gameObject.GetComponent<Animator>().enabled = true;
+            transform.position -= new Vector3(0f, speed * Time.deltaTime, 0f);      
+            animator.Play("Player_IdleDown");
+        }
+
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            animator.gameObject.GetComponent<Animator>().enabled = false;
 
         }
-        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space))
+
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyUp(KeyCode.Space))
         {
             Shoot();
+            
 
         }
+
+       
+
+
+
     }
 
     private void Shoot() {

@@ -8,6 +8,7 @@ TagManager:
   - firingPoint
   - gun
   - Bullet
+  - tree
   layers:
   - Default
   - TransparentFX
