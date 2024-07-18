@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class BakerPigeon : MonoBehaviour
 
@@ -16,7 +17,8 @@ public class BakerPigeon : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
     public bool isTalking;
-
+    private PlayerMovement playerMovement;
+    
     // Start is called before the first frame update
 
     void Update()
@@ -33,6 +35,12 @@ public class BakerPigeon : MonoBehaviour
                 bakerDialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
                 isTalking = true;
+
+                if (GameObject.FindGameObjectWithTag("mainPlayer"))
+                {
+                    playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
+                }
+                playerMovement.Pause();
             }
         }
 
@@ -40,9 +48,7 @@ public class BakerPigeon : MonoBehaviour
         {
             contButton.SetActive(true);
         }
-    }
-
-    
+    }    
 
     public void zeroText()
     {
@@ -50,6 +56,12 @@ public class BakerPigeon : MonoBehaviour
         index = 0;
         bakerDialoguePanel.SetActive(false);
         isTalking = false;
+
+        if (GameObject.FindGameObjectWithTag("mainPlayer"))
+        {
+            playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
+        }
+        playerMovement.Unpause();
     }
 
     IEnumerator Typing()

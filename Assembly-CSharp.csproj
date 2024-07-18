@@ -67,9 +67,10 @@
     <Compile Include="Assets\camera.cs" />
     <Compile Include="Assets\BakerPigeon.cs" />
     <Compile Include="Assets\firingpoint.cs" />
+    <Compile Include="Assets\pigeonKing.cs" />
     <Compile Include="Assets\DoorScript.cs" />
     <Compile Include="Assets\Enemy.cs" />
-    <Compile Include="Assets\pigeonKing.cs" />
+    <Compile Include="Assets\health.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
